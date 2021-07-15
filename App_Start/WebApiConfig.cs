@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BigSchool.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -7,6 +8,7 @@ namespace BigSchool
 {
     public static class WebApiConfig
     {
+        [HttpPost]
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();
@@ -17,5 +19,7 @@ namespace BigSchool
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+        
+        
     }
 }
